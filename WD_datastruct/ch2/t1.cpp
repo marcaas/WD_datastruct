@@ -7,7 +7,7 @@ bool t1(SqList &L, ElemType &min){
     if (L.length <= 0)      //判断输入顺序表的合法性
     {
         cout << "输入的顺序表不合法。" << endl;
-        return fasle;
+        return false;
     }
     min = L.data[0];
     int num = 0;
@@ -15,12 +15,25 @@ bool t1(SqList &L, ElemType &min){
     {
         if (L.data[i] < min)
         {
-            min = L.data[i] //更新最小值
+            min = L.data[i];//更新最小值
             num = i;        //记录删除元素位置
         }
     }
-    L.data[i] = L.data[L.length - 1];       //用顺序表表尾元素替换删除元素
+    L.data[num] = L.data[L.length - 1];       //用顺序表表尾元素替换删除元素
     L.length--;     //更新表长
     cout << "数组的最小值为" << min << endl;
     return true;
+}
+
+int main(){
+    SqList L;
+    L.length = 10;
+    for (int i = 0; i < L.length; i++)
+    {
+        L.data[i] = i + 1;
+        cout << L.data[i] << endl;
+    }
+    int Min;
+    t1(L, Min);
+    return 0;
 }

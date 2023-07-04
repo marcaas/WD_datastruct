@@ -15,4 +15,3 @@ typedef struct
     ElemType *data;     //指示动态分配数组的指针
     int length;         //数组的当前元素个数
 }SeqList;               //动态分配数组顺序表的类型定义
-
