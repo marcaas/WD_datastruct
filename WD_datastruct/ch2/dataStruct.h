@@ -21,3 +21,17 @@ typedef struct
     ElemType *data;     //指示动态分配数组的指针
     int length;         //数组的当前元素个数
 }SeqList;               //动态分配数组顺序表的类型定义
+
+// 生成长度为length顺序表
+SqList newSqL(int length){
+    SqList L;
+    L.length = length;
+    cout << "SqL:[";
+    for (int i = 0; i < length; i++)
+    {
+        L.data[i] = i + 1;
+        cout << L.data[i] << " ";
+    }
+    cout << "]" << endl;
+    return L;
+}
