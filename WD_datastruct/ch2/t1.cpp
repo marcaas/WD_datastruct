@@ -1,7 +1,7 @@
 // 从顺序表中删除具有最小值的元素（假设唯一）并由函数返回被删元素的值，空出的位置由最后一个元素填补，若顺序表为空，则显示出错信息并退出运行
-#include <iostream>
+// #include <iostream>
 #include "dataStruct.h"
-using namespace std;
+// using namespace std;
 
 bool t1(SqList &L, ElemType &min){    
     if (L.length <= 0)      //判断输入顺序表的合法性
@@ -25,6 +25,7 @@ bool t1(SqList &L, ElemType &min){
     return true;
 }
 
+// test
 int main(){
     SqList L;
     L.length = 10;

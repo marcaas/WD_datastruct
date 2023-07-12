@@ -1,3 +1,8 @@
+// environment
+#include <iostream>
+using namespace std;
+
+
 // 顺序表的定义
 // 静态分配的顺序表
 #define MaxSize 50      //定义线性表的最大长度
@@ -9,6 +14,7 @@ typedef struct
 }SqList;                //静态分配数组顺序表的类型定义
 
 // 动态分配的顺序表
+// C++的初始动态分配语句为：L.data = new ElemType[InitSize];
 #define InitSize 100    //表长度的初始定义
 typedef struct 
 {
