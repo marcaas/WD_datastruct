@@ -26,7 +26,8 @@ typedef struct
 SqList newSqL(int length){
     SqList L;
     L.length = length;
-    cout << "SqL:[";
+    cout << "SqL:" << endl;
+    cout << "[ ";
     for (int i = 0; i < length; i++)
     {
         L.data[i] = i + 1;
